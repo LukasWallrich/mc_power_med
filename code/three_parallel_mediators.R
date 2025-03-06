@@ -142,13 +142,13 @@ if(any(abs(corMat) > 1)) {
   corMat[4,1] <- corMat[1,4] <- a3
   corMat[2,3] <- corMat[3,2] <- cor32
   corMat[2,4] <- corMat[4,2] <- cor42
-  corMat[3,4] <- corMat[4,2] <- cor43
+  corMat[3,4] <- corMat[4,3] <- cor43
   
   corMat[5,1] <- corMat[1,5] <- cprime + a1*b1 + a2*b2 + a3*b3
 
   corMat[2,5] <- corMat[5,2] <- a1*cprime + b1 + b2*cor32 + b3*cor42
-  corMat[3,5] <- corMat[5,3] <- a2*cprime + b2 + b1*cor32 + b3*cor42
-  corMat[4,5] <- corMat[5,4] <- a3*cprime + b3 + b2*cor32 + b1*cor42
+  corMat[3,5] <- corMat[5,3] <- a2*cprime + b2 + b1*cor32 + b3*cor43
+  corMat[4,5] <- corMat[5,4] <- a3*cprime + b3 + b2*cor43 + b1*cor42
   
 }
 
